@@ -1,0 +1,152 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #1f4e79;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+/* ===== NAV ===== */
+nav {
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7rem 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== CARD ===== */
+.card {
+    border: 1px solid #bfc5c9;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Card Header */
+.card h2 {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 0.7rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.about-content p {
+    flex: 2;
+    line-height: 1.5;
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Country Section */
+.card h3 {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.country-box {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.country-box img {
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+.country-box p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Resources List */
+.card ul {
+    list-style-type: disc;
+    padding: 1rem 2rem;
+}
+
+.card ul li {
+    margin-bottom: 0.6rem;
+}
+
+.card ul li a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
