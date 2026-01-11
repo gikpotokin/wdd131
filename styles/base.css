@@ -1,18 +1,15 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     color: #000000;
 }
 
-/* ===== HEADER ===== */
 header {
     background-color: #1f4e79;
     text-align: center;
@@ -26,7 +23,6 @@ header {
     padding: 1rem 0;
 }
 
-/* ===== NAV ===== */
 nav {
     background-color: #2f2f2f;
     display: flex;
@@ -44,7 +40,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* ===== MAIN ===== */
 main {
     max-width: 1100px;
     margin: 2rem auto;
@@ -61,7 +56,6 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* ===== CARD ===== */
 .card {
     border: 1px solid #bfc5c9;
     border-radius: 8px;
@@ -78,7 +72,6 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* About Content */
 .about-content {
     display: flex;
     justify-content: space-between;
@@ -98,7 +91,6 @@ h1 {
     border-radius: 4px;
 }
 
-/* Country Section */
 .card h3 {
     text-align: center;
     margin: 0.5rem 0;
@@ -122,7 +114,6 @@ h1 {
     line-height: 1.4;
 }
 
-/* Resources List */
 .card ul {
     list-style-type: disc;
     padding: 1rem 2rem;
@@ -137,7 +128,6 @@ h1 {
     text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background-color: #1f4e79;
     color: #ffffff;
