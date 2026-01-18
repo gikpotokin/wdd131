@@ -10,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Header */
 header {
   background-color: #4b136d;
   color: #fff;
@@ -24,7 +23,6 @@ header h2 {
   font-size: 1.4rem;
 }
 
-/* Hamburger Button */
 #menu-btn {
   font-size: 1.8rem;
   background: none;
@@ -33,7 +31,6 @@ header h2 {
   cursor: pointer;
 }
 
-/* Navigation */
 nav {
   display: none;
   flex-direction: column;
@@ -52,12 +49,10 @@ nav a:hover {
   background-color: #6a1b9a;
 }
 
-/* Show Menu */
 nav.open {
   display: flex;
 }
 
-/* Main */
 main {
   max-width: 800px;
   margin: 1.5rem auto;
@@ -69,7 +64,6 @@ main h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -91,7 +85,7 @@ figcaption {
   color: #4b136d;
   font-weight: 600;
 }
-/* ===== FOOTER ===== */
+
 footer {
   background-color: #1f4e79;
   color: #ffffff;
@@ -105,23 +99,15 @@ footer p {
   margin: 0.3rem 0;
 }
 
-/* ===== GALLERY (Mobile First) ===== */
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr; /* Small devices: 1 image */
-  gap: 1.5rem;
-}
-
-/* ===== Tablet ===== */
 @media (min-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 images */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* ===== Large Screens ===== */
 @media (min-width: 1024px) {
   .gallery {
-    grid-template-columns: repeat(3, 1fr); /* 3 images */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
