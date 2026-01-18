@@ -69,12 +69,6 @@ main h1 {
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
 
 figure {
   text-align: center;
