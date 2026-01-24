@@ -8,7 +8,7 @@
   --dark: #1f2933;
   --light: #f4fdf7;
 
-  --overlay-bg: rgba(255, 255, 255, 0.9);
+  --overlay-bg: rgba(255, 255, 255, 0.85);
 
   --header-gradient: linear-gradient(
     135deg,
@@ -65,35 +65,53 @@ header h1 {
   display: block;
 }
 
-/* ---------- MAIN ---------- */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
-/* ---------- CARDS (MOBILE STACKED) ---------- */
+/* ---------- GLASS CARDS ---------- */
 .card {
-  background: var(--white);
+  background: var(--overlay-bg);
   margin: 1.2rem;
   padding: 1.6rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
 }
 
+/* ---------- CARD HEADER (DATA & WEATHER) ---------- */
 .card h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: var(--green-dark);
+  margin: -1.6rem -1.6rem 1.2rem -1.6rem;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 93, 30, 0.95),
+    rgba(0, 135, 83, 0.95)
+  );
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- DATA ---------- */
+/* ---------- HEADER ICONS ---------- */
+.data h2::before {
+  content: "📊 ";
+  margin-right: 6px;
+}
+
+.weather h2::before {
+  content: "⛅ ";
+  margin-right: 6px;
+}
+
+/* ---------- DATA LIST ---------- */
 .data ul {
   list-style: none;
 }
 
 .data li {
-  margin: 0.5rem 0;
-  padding-left: 0.6rem;
+  margin: 0.55rem 0;
+  padding-left: 0.7rem;
   border-left: 4px solid var(--green-main);
 }
 
@@ -123,10 +141,10 @@ footer {
 
 @media (min-width: 900px) {
 
-  /* Hero becomes FULL SCREEN */
+  /* Hero FULL SCREEN */
   .hero {
     position: relative;
-    height: 100vh; /* FULL SCREEN HEIGHT */
+    height: 100vh;
     overflow: hidden;
   }
 
@@ -140,7 +158,7 @@ footer {
     object-fit: cover;
   }
 
-  /* Main overlays content */
+  /* Main overlays hero */
   main {
     position: relative;
   }
@@ -152,28 +170,20 @@ footer {
     transform: translateY(-50%);
     max-width: 420px;
     margin: 0;
-    background: var(--overlay-bg);
-    backdrop-filter: blur(6px);
   }
 
-  /* Data on left */
+  /* Data left */
   .data {
     left: 5%;
   }
 
-  /* Weather on right */
+  /* Weather right */
   .weather {
     right: 5%;
   }
 
-  /* Hide SVG icon in wide view */
+  /* Hide SVG icon on desktop */
   .weather-icon {
     display: none;
-  }
-
-  /* Emoji icon after Weather heading */
-  .weather h2::after {
-    content: " ⛅";
-    font-size: 1.5rem;
   }
 }
