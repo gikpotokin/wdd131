@@ -134,6 +134,10 @@ footer {
   margin-top: 2rem;
   font-size: 0.95rem;
 }
+footer::after {
+  content: "";
+  display: block;
+}
 
 /* ========================================================= */
 /* ===================== WIDE VIEW ========================= */
