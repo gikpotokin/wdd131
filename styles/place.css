@@ -1,0 +1,179 @@
+:root {
+  /* Nigeria Colors */
+  --green-dark: #0b5d1e;
+  --green-main: #008753;
+  --green-light: #4caf50;
+  --white: #ffffff;
+
+  --dark: #1f2933;
+  --light: #f4fdf7;
+
+  --overlay-bg: rgba(255, 255, 255, 0.9);
+
+  --header-gradient: linear-gradient(
+    135deg,
+    #0b5d1e,
+    #008753
+  );
+
+  --footer-gradient: linear-gradient(
+    135deg,
+    #008753,
+    #0b5d1e
+  );
+
+  --font: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- BODY ---------- */
+body {
+  font-family: var(--font);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: var(--header-gradient);
+  color: var(--white);
+  text-align: center;
+  padding: 1.6rem 1rem;
+  border-bottom: 8px solid var(--green-light);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ---------- HERO (MOBILE DEFAULT) ---------- */
+.hero {
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- MAIN ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- CARDS (MOBILE STACKED) ---------- */
+.card {
+  background: var(--white);
+  margin: 1.2rem;
+  padding: 1.6rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--green-dark);
+}
+
+/* ---------- DATA ---------- */
+.data ul {
+  list-style: none;
+}
+
+.data li {
+  margin: 0.5rem 0;
+  padding-left: 0.6rem;
+  border-left: 4px solid var(--green-main);
+}
+
+/* ---------- WEATHER ---------- */
+.weather {
+  text-align: center;
+}
+
+.weather-icon {
+  width: 60px;
+  margin: 0.8rem auto;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--footer-gradient);
+  color: var(--white);
+  text-align: center;
+  padding: 1.6rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* ========================================================= */
+/* ===================== WIDE VIEW ========================= */
+/* ========================================================= */
+
+@media (min-width: 900px) {
+
+  /* Hero becomes FULL SCREEN */
+  .hero {
+    position: relative;
+    height: 100vh; /* FULL SCREEN HEIGHT */
+    overflow: hidden;
+  }
+
+  .hero picture,
+  .hero img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero img {
+    object-fit: cover;
+  }
+
+  /* Main overlays content */
+  main {
+    position: relative;
+  }
+
+  /* Cards overlay hero */
+  .card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 420px;
+    margin: 0;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Data on left */
+  .data {
+    left: 5%;
+  }
+
+  /* Weather on right */
+  .weather {
+    right: 5%;
+  }
+
+  /* Hide SVG icon in wide view */
+  .weather-icon {
+    display: none;
+  }
+
+  /* Emoji icon after Weather heading */
+  .weather h2::after {
+    content: " ⛅";
+    font-size: 1.5rem;
+  }
+}

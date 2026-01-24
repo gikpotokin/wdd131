@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigeria | Country Page</title>
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Nigeria</h1>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/rock.jpg" media="(min-width: 900px)">
+        <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+        <img src="images/hero-small.webp" alt="Landscape and culture of Nigeria">
+      </picture>
+    </section>
+
+    <!-- Data -->
+    <section class="card data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 923,768 sq km</li>
+        <li><strong>Population:</strong> 227,000,000+</li>
+        <li><strong>Capital:</strong> Abuja</li>
+        <li><strong>Languages:</strong> English (official), Hausa, Yoruba, Igbo</li>
+        <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+        <li><strong>Time Zone:</strong> UTC+1 (WAT)</li>
+        <li><strong>Calling Code:</strong> +234</li>
+        <li><strong>Internet TLD:</strong> .ng</li>
+      </ul>
+    </section>
+
+    <!-- Weather -->
+    <section class="card weather">
+      <h2>Weather</h2>
+
+      <!-- SVG icon for mobile -->
+      <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon">
+
+      <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
+      <p><strong>Conditions:</strong> Partly Cloudy</p>
+      <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> 🌿 Nigeria 🌿<br>
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+</body>
+</html>
