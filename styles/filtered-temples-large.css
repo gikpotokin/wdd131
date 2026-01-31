@@ -1,27 +1,22 @@
-/* =====================================
-   LARGE SCREEN STYLES (768px+)
-===================================== */
+/* LARGE SCREEN STYLES (768px+) */
 @media (min-width: 768px) {
 
-  /* Hide hamburger menu */
   #menu-btn {
     display: none;
   }
 
-  /* Horizontal navigation */
   nav {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     gap: 1rem;
     width: auto;
   }
 
-  nav button {
+  nav a {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
 
-  /* 3-column gallery on desktop */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }

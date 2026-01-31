@@ -104,7 +104,7 @@ const temples = [
 ];
 
 const templesContainer = document.getElementById("temples-container");
-const navButtons = document.querySelectorAll("nav button");
+const navLinks = document.querySelectorAll("nav a");
 const pageTitle = document.getElementById("page-title");
 
 function createTempleCard(temple) {
@@ -169,13 +169,15 @@ function filterTemples(filter) {
   displayTemples(filteredTemples);
 }
 
-navButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    filterTemples(button.dataset.filter);
+navLinks.forEach(link => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    filterTemples(link.dataset.filter);
 
     navMenu.classList.remove("open");
     menuButton.textContent = "☰";
   });
 });
+
 
 displayTemples(temples);

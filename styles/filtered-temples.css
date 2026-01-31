@@ -41,18 +41,18 @@ nav {
   width: 100%;
 }
 
-nav button {
-  background: none;
-  border: none;
+nav a {
+  display: block;
   color: white;
+  text-decoration: none;
   padding: 0.75rem;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
 }
 
-nav button:hover,
-nav button:focus {
+nav a:hover,
+nav a:focus {
   background-color: #6a1b9a;
 }
 
@@ -136,7 +136,7 @@ footer p {
     justify-content: center;
   }
 
-  nav button {
+  nav a {
     width: auto;
     padding: 0.75rem 1.2rem;
   }
