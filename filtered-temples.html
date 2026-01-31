@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temples</title>
+
+  <meta name="description" content="A responsive temple album page with filtering and lazy-loaded images.">
+  <meta name="author" content="Godswill Moses Ikpotokin">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h2>Temple Album</h2>
+
+  <button id="menu-btn" aria-label="Open Menu">&#9776;</button>
+
+  <nav id="nav-menu">
+    <button data-filter="home">Home</button>
+    <button data-filter="old">Old</button>
+    <button data-filter="new">New</button>
+    <button data-filter="large">Large</button>
+    <button data-filter="small">Small</button>
+  </nav>
+</header>
+
+<main>
+  <h1 id="page-title">Home</h1>
+
+  <section class="gallery" id="temples-container"></section>
+</main>
+
+<footer>
+  <p>© <span id="currentyear"></span> Godswill Ikpotokin 🌸 Nigeria</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
