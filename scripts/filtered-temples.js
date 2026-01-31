@@ -169,15 +169,27 @@ function filterTemples(filter) {
   displayTemples(filteredTemples);
 }
 
+// navLinks.forEach(link => {
+//   link.addEventListener("click", (event) => {
+//     event.preventDefault(); 
+//     filterTemples(link.dataset.filter);
+
+//     navMenu.classList.remove("open");
+//     menuButton.textContent = "☰";
+//   });
+// });
+
 navLinks.forEach(link => {
   link.addEventListener("click", (event) => {
-    event.preventDefault(); 
-    filterTemples(link.dataset.filter);
+    event.preventDefault();
+
+    const filter = link.getAttribute("href").replace("#", "");
+
+    filterTemples(filter);
 
     navMenu.classList.remove("open");
     menuButton.textContent = "☰";
   });
 });
-
 
 displayTemples(temples);
