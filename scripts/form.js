@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const productSelect = document.querySelector("#product");
 
