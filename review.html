@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  
+
+  <link rel="stylesheet" href="styles/form.css">
+  ;    <script src="scripts/getdates.js" defer></script>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      let count = Number(localStorage.getItem("reviewCount")) || 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+      document.getElementById("counter").textContent = count;
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Thank You!</h1>
+</header>
+
+<main>
+  <p>Your review has been successfully submitted.</p>
+  <p>Total reviews submitted: <strong id="counter"></strong></p>
+</main>
+<!-- ===== FOOTER ===== -->
+    <footer>
+        <p>
+            © <span id="currentyear"></span> Godswill Ikpotokin 🌸 Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <!-- Author: Godswill Moses Ikpotokin ( www.ikpotokin.ng ) -->
+    <!-- Student @ BYU Idaho -->
+    <!-- CEO and Founder, Applinet Technology ( www.ikpotokin.ng ), Thelmarket and CodeHouse Cloud ( www.codehouse.cloud ) -->
+
+
+</body>
+</html>

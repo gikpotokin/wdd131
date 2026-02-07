@@ -1,0 +1,146 @@
+:root {
+  --primary: #4b004b;
+  --background: #e4dde3;
+  --form-bg: #ddd6dc;
+  --white: #ffffff;
+  --star: #fbbc04;
+  --border: #bbb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  line-height: 1.5;
+}
+
+/* ===== HEADER & FOOTER ===== */
+header,
+footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ===== MAIN FORM CARD ===== */
+main {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  background-color: var(--form-bg);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* ===== FORM LAYOUT ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ===== LABELS ===== */
+label,
+legend {
+  font-weight: bold;
+  color: #000;
+}
+
+/* ===== INPUTS ===== */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ===== FIELDSETS ===== */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  margin-bottom: 0.4rem;
+}
+
+/* ===== CHECKBOX GROUP ===== */
+fieldset:not(.rating) label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  margin-top: 0.4rem;
+}
+
+/* ===== STAR RATING (GOOGLE STYLE) ===== */
+.rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating legend {
+  margin-bottom: 0.3rem;
+}
+
+.rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2.2rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0 0.15rem;
+}
+
+/* Hover effect */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: var(--star);
+}
+
+/* Selected stars */
+.rating input:checked ~ label {
+  color: var(--star);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+input[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--white);
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #f0f0f0;
+}
