@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Explore African novels, epics, and literary works in the African E-Library digital collection. Search and discover stories from across the continent.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>African E-Library | Literature Collection</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/e-library.css">
+
+  <script src="../scripts/e-library.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ==========================
+       HEADER
+  =========================== -->
+  <header>
+    <h1>African E-Library</h1>
+    <nav aria-label="Primary Navigation">
+      <a href="e-library.html">Home</a>
+      <a href="literature.html" aria-current="page">Literature</a>
+      <a href="library.html">Library</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+
+  <!-- ==========================
+       MAIN CONTENT
+  =========================== -->
+  <main>
+
+    <!-- Page Introduction -->
+    <section class="hero">
+      <h2>Literature Collection</h2>
+      <p>
+        Browse and search African literary works including novels, historical
+        narratives, and epic oral traditions preserved in written form.
+      </p>
+    </section>
+
+
+    <!-- SEARCH SECTION -->
+    <section class="search-bar" aria-label="Search African Literature">
+      <label for="search" class="section-title">Search Books</label>
+      <input 
+        type="text"
+        id="search"
+        placeholder="Search by title, author, or region..."
+        aria-label="Search books by title, author, or region">
+    </section>
+
+
+    <!-- BOOK RESULTS -->
+    <section>
+      <h2 class="section-title">Available Works</h2>
+
+      <!-- Dynamic Cards Render Here -->
+      <div id="bookContainer" class="grid grid-2"></div>
+
+      <!-- Pagination Buttons Render Here -->
+      <div id="pagination" class="pagination" aria-label="Pagination Navigation"></div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+
+  </main>
+
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
+  <footer>
+    <p>© 2026 African E-Library | Lagos, Nigeria</p>
+    <p>Author: Godswill Moses Ikpotokin</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+</body>
+</html>

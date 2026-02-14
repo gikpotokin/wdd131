@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Explore detailed information about African literary works and submit book recommendations to the African E-Library.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>African E-Library | Library</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/e-library.css">
+
+  <script src="../scripts/e-library.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ==========================
+       HEADER
+  =========================== -->
+  <header class="sticky-header">
+    <h1>African E-Library</h1>
+    <nav aria-label="Primary Navigation">
+      <a href="e-library.html">Home</a>
+      <a href="literature.html">Literature</a>
+      <a href="library.html" aria-current="page">Library</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <!-- ==========================
+       MAIN CONTENT
+  =========================== -->
+  <main>
+
+    <!-- INTRODUCTION -->
+    <section class="hero">
+      <h2>Library Spotlight</h2>
+      <p>
+        Explore detailed insights into selected African literary works. 
+        Click “View Details” to read descriptions and track readership engagement.
+      </p>
+    </section>
+
+    <!-- BOOK DISPLAY -->
+    <section>
+      <h2 class="section-title">Featured Titles</h2>
+
+      <!-- JS dynamically renders books here -->
+      <div id="bookContainer" class="grid grid-2"></div>
+
+      <!-- PAGINATION -->
+      <div id="pagination" class="pagination"></div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" tabindex="-1">
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+
+    <!-- RECOMMENDATION FORM -->
+    <section>
+      <h2 class="section-title">Recommend a Book</h2>
+
+      <form id="recommendForm" novalidate>
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required aria-required="true">
+        </div>
+
+        <div>
+          <label for="title">Book Title</label>
+          <input type="text" id="title" name="title" required aria-required="true">
+        </div>
+
+        <button type="submit">Submit Recommendation</button>
+
+        <p id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ==========================
+       FOOTER
+  =========================== -->
+  <footer>
+    <p>© 2026 African E-Library | Lagos, Nigeria</p>
+    <p>Author: Godswill Moses Ikpotokin</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+</body>
+</html>
